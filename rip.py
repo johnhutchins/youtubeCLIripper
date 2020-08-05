@@ -6,14 +6,10 @@ SAVE_PATH = '~./Downloads/'
 def main(argv):
     method = argv[0]
     url = argv[1]
-    print('url ', url)
-    # getUrl(url)
     functions.get(method)(url)
 
 def ripSingleVideo(localurl):
-    print("function running ripSingleVideo")
-    # localurl = getURL()
-    print("local url = ", localurl)
+    print('trying rip single video....')
     try:
         yt = YouTube(localurl)
     except ConnectionError as e:
@@ -22,9 +18,7 @@ def ripSingleVideo(localurl):
     mp4files.download(SAVE_PATH)
 
 def ripList(localurl):
-    print("function running rip list")
-    #  localurl = getURL()
-    print("local url = ", localurl)
+    print('trying rip list....')
     try:
         playlist = Playlist(localurl)
         playlist.download_all(SAVE_PATH)
