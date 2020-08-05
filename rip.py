@@ -4,9 +4,13 @@ from pytube import YouTube, Playlist
 SAVE_PATH = '~./Downloads/'
 
 def main(argv):
-    method = argv[0]
-    url = argv[1]
-    functions.get(method)(url)
+    if(len(argv) > 2):
+        print('Error. Too many arguments')
+        return
+    else:
+        method = argv[0]
+        url = argv[1]
+        functions.get(method)(url)
 
 def ripSingleVideo(localurl):
     print('trying rip single video....')
