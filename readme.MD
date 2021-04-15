@@ -3,6 +3,7 @@
 - pytube-10.7.1
 
 ## CLI usage example:
-- python3 rip.py ripSingleVideo https://youtube.com/alsdlkjw
+- python3 rip.py ripSingleVideo 'https://youtube.com/alsdlkjw'
 - Note* if using ohmyzsh url will be encoded and you will need to change it
 
+*note, url must be a string via cli, IE pass in quotes
